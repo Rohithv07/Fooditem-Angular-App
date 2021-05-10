@@ -26,7 +26,7 @@ export class AuthService {
   signup(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[enter key from firebase]',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[enter key]',
         {
           email: email,
           password: password,
@@ -49,7 +49,7 @@ export class AuthService {
   login(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[enter key from firebase]',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[enter key]',
         {
           email: email,
           password: password,
